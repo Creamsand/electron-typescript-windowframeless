@@ -7,17 +7,22 @@ function createWindow() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
     height: 600,
+    minHeight: 200,
     webPreferences: {
-      preload: path.join(__dirname, "preload.js"),
+      nodeIntegration: false,
+      preload: path.join(__dirname, "preload.js")
     },
     width: 800,
+    minWidth: 400,
+    frame: false,
+    transparent: true
   });
 
   // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, "../index.html"));
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  //mainWindow.webContents.openDevTools();
 
   // Emitted when the window is closed.
   mainWindow.on("closed", () => {

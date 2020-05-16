@@ -1,0 +1,61 @@
+html {
+    background-color: transparent;
+}
+body {
+    margin:0;
+    background: rgba(0,0,0,0);
+}
+#windowframe {
+    background-color:#505655;
+    color:white;
+    width:100%;
+    display:block;
+    margin:0;
+    border:1px solid #505655;
+}
+#windowtitle {
+    color:white;
+    -webkit-app-region: drag;/* ドラッグ可能に */
+    -webkit-user-select: none; /* ドラッグはテキスト選択と競合するので禁止 */
+    margin:0;
+    line-height: 1.1;
+}
+#windowbtn {
+    margin:1px 0;
+    padding:0 !important;
+    height:31px;
+}
+#min-btn,#question-btn,#close-btn {
+    -webkit-app-region: none !important; /* ドラッグ可能に */
+    -webkit-user-select: text !important; /* ドラッグはテキスト選択と競合するので禁止 */
+    margin:0;
+    width:31px;
+}
+#lch_list {
+    background: rgba(202, 202, 202, 0.8);
+    height:100%;
+    width:100%;
+}
+#ds-icon{
+    color:rgb(238, 227, 80);
+}
+#nowdated {
+    margin-left:10px;
+}
+#wnd_foot{
+    background: rgba(255, 255, 255, 0.8);
+}
+.cp-val {
+    cursor: pointer;
+    position: relative;
+}
+.cp-val:hover {
+    background: #f2fafc;
+}
+#alert1 {
+    font-size: 14px;
+    padding: 2px;
+}
+#usernm{
+    font-weight: bold;
+}

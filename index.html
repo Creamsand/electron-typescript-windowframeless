@@ -3,14 +3,36 @@
   <head>
     <meta charset="UTF-8">
     <title>Hello World!</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+    <header id="windowframe">
+      <div class="d-flex justify-content-start"></div>
+      <div class="d-flex justify-content-between">
+        
+          <span id="windowtitle" class="p-2 flex-fill bd-highlight">
+            <span id="windowicon"></span>
+          </span>
+          <div id="windowbtn" class="p-2 bd-highlight">
+              <button id="min-btn" type="submit" class="btn btn-sm btn-secondary">_</button>
+              <button id="close-btn" type="submit" class="btn btn-sm btn-danger">×</button>
+          </div>
+      </div>
+      
+    <main id="lch_list">
+      
+    </main>
+    <footer id="wnd_foot">
+      <span id="foot_1"></span>
+      <span id="alert1" class="alert alert-success" role="alert">
+      </span>
+    </footer>
 
     <!-- You can also require other files to run in this process -->
     <script src="./dist/renderer.js"></script>
+    
+    <!-- V4 version -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap.native/2.0.27/bootstrap-native-v4.min.js"></script>
   </body>
 </html>
