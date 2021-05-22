@@ -1,6 +1,8 @@
 // Node.js APIはすべてプリロードプロセスで使用できます。
 // Chrome拡張機能と同じサンドボックスがあります。
-const apptitle:string = 'アプリ';
+const apptitle:string = 'Launcher';
+const yaml = require('js-yaml');
+const fs = require('fs');
 
 // アロー関数:getelemId(引数1:selector1(文字列))
 export const getelemId = (selector1: string) => {
@@ -57,5 +59,19 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   getelemId('windowicon').insertAdjacentHTML('beforebegin','');
+
+  // ウィンドウタイトル
   getelemId('windowtitle').innerText = apptitle;
+
+  // 設定ファイル読み込み
+  // Get document, or throw exception on error
+  try {
+    const conffile:string = fs.readFileSync('C:\\Users\\user\\Desktop\\config.yaml', 'utf8');
+    const doc = yaml.load(conffile);
+    console.log(doc);
+    // リスト出力
+    getelemId('lch_list').innerText = doc.appconf.window_size;
+  } catch (e) {
+    console.log(e);
+  }
 });
